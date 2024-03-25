@@ -50,25 +50,29 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.abaNovoCliente = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.abaNovaVenda = new System.Windows.Forms.TabPage();
+            this.abaNovoProduto = new System.Windows.Forms.TabPage();
+            this.abaBuscaCliente = new System.Windows.Forms.TabPage();
+            this.abaBuscaProduto = new System.Windows.Forms.TabPage();
+            this.abaListarVendas = new System.Windows.Forms.TabPage();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -208,7 +212,7 @@
             this.toolStripButton1.Size = new System.Drawing.Size(104, 56);
             this.toolStripButton1.Text = "Novo Cliente";
             this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.toolStripButton1.Click += new System.EventHandler(this.novoCliente);
             // 
             // toolStripSeparator1
             // 
@@ -251,11 +255,15 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.abaNovoCliente);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.abaNovaVenda);
+            this.tabControl1.Controls.Add(this.abaNovoProduto);
+            this.tabControl1.Controls.Add(this.abaBuscaCliente);
+            this.tabControl1.Controls.Add(this.abaBuscaProduto);
+            this.tabControl1.Controls.Add(this.abaListarVendas);
             this.tabControl1.Location = new System.Drawing.Point(110, 41);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1493, 1013);
+            this.tabControl1.Size = new System.Drawing.Size(982, 902);
             this.tabControl1.TabIndex = 2;
             this.tabControl1.Visible = false;
             // 
@@ -283,155 +291,18 @@
             this.abaNovoCliente.Location = new System.Drawing.Point(4, 44);
             this.abaNovoCliente.Name = "abaNovoCliente";
             this.abaNovoCliente.Padding = new System.Windows.Forms.Padding(3);
-            this.abaNovoCliente.Size = new System.Drawing.Size(1485, 965);
+            this.abaNovoCliente.Size = new System.Drawing.Size(974, 854);
             this.abaNovoCliente.TabIndex = 0;
             this.abaNovoCliente.Text = "Cadastro de Cliente";
             // 
-            // tabPage2
+            // button3
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 44);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1137, 355);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 35);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nome Completo";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(238, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(724, 42);
-            this.textBox1.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(42, 130);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 35);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "CPF";
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(130, 123);
-            this.maskedTextBox1.Mask = "000,000,000-00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(206, 42);
-            this.maskedTextBox1.TabIndex = 3;
-            this.maskedTextBox1.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(417, 126);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 35);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "RG";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(492, 123);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(206, 42);
-            this.textBox2.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(42, 217);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 35);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Endereço";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(187, 214);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(775, 42);
-            this.textBox3.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(42, 311);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 35);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Cidade";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(187, 303);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(592, 43);
-            this.comboBox1.TabIndex = 9;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(806, 306);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(156, 35);
-            this.linkLabel1.TabIndex = 10;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Nova Cidade";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(42, 400);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(145, 35);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Nascimento";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(210, 393);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(216, 42);
-            this.dateTimePicker1.TabIndex = 12;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(538, 396);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(111, 35);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Telefone";
-            // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(676, 393);
-            this.maskedTextBox2.Mask = "(00)00000-0000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(214, 42);
-            this.maskedTextBox2.TabIndex = 14;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(58, 518);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 49);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Novo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button3.Location = new System.Drawing.Point(830, 518);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(105, 49);
+            this.button3.TabIndex = 17;
+            this.button3.Text = "Salvar";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -442,14 +313,192 @@
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // button1
             // 
-            this.button3.Location = new System.Drawing.Point(830, 518);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(105, 49);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "Salvar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(58, 518);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(102, 49);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Novo";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Location = new System.Drawing.Point(676, 393);
+            this.maskedTextBox2.Mask = "(00)00000-0000";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(214, 42);
+            this.maskedTextBox2.TabIndex = 14;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(538, 396);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(111, 35);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Telefone";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(210, 393);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(216, 42);
+            this.dateTimePicker1.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(42, 400);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(145, 35);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Nascimento";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(806, 306);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(156, 35);
+            this.linkLabel1.TabIndex = 10;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Nova Cidade";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.frmCidade);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(187, 303);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(592, 43);
+            this.comboBox1.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(42, 311);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(91, 35);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Cidade";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(187, 214);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(775, 42);
+            this.textBox3.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(42, 217);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(118, 35);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Endereço";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(492, 123);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(206, 42);
+            this.textBox2.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(417, 126);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 35);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "RG";
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(130, 123);
+            this.maskedTextBox1.Mask = "000,000,000-00";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(206, 42);
+            this.maskedTextBox1.TabIndex = 3;
+            this.maskedTextBox1.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(42, 130);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 35);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "CPF";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(238, 39);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(724, 42);
+            this.textBox1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(32, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(200, 35);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nome Completo";
+            // 
+            // abaNovaVenda
+            // 
+            this.abaNovaVenda.Location = new System.Drawing.Point(4, 44);
+            this.abaNovaVenda.Name = "abaNovaVenda";
+            this.abaNovaVenda.Padding = new System.Windows.Forms.Padding(3);
+            this.abaNovaVenda.Size = new System.Drawing.Size(974, 854);
+            this.abaNovaVenda.TabIndex = 1;
+            this.abaNovaVenda.Text = "Nova Venda";
+            this.abaNovaVenda.UseVisualStyleBackColor = true;
+            // 
+            // abaNovoProduto
+            // 
+            this.abaNovoProduto.Location = new System.Drawing.Point(4, 44);
+            this.abaNovoProduto.Name = "abaNovoProduto";
+            this.abaNovoProduto.Padding = new System.Windows.Forms.Padding(3);
+            this.abaNovoProduto.Size = new System.Drawing.Size(974, 854);
+            this.abaNovoProduto.TabIndex = 2;
+            this.abaNovoProduto.Text = "Cadastro Produto";
+            this.abaNovoProduto.UseVisualStyleBackColor = true;
+            // 
+            // abaBuscaCliente
+            // 
+            this.abaBuscaCliente.Location = new System.Drawing.Point(4, 44);
+            this.abaBuscaCliente.Name = "abaBuscaCliente";
+            this.abaBuscaCliente.Padding = new System.Windows.Forms.Padding(3);
+            this.abaBuscaCliente.Size = new System.Drawing.Size(974, 854);
+            this.abaBuscaCliente.TabIndex = 3;
+            this.abaBuscaCliente.Text = "tabPage4";
+            this.abaBuscaCliente.UseVisualStyleBackColor = true;
+            // 
+            // abaBuscaProduto
+            // 
+            this.abaBuscaProduto.Location = new System.Drawing.Point(4, 44);
+            this.abaBuscaProduto.Name = "abaBuscaProduto";
+            this.abaBuscaProduto.Padding = new System.Windows.Forms.Padding(3);
+            this.abaBuscaProduto.Size = new System.Drawing.Size(974, 854);
+            this.abaBuscaProduto.TabIndex = 4;
+            this.abaBuscaProduto.Text = "tabPage5";
+            this.abaBuscaProduto.UseVisualStyleBackColor = true;
+            // 
+            // abaListarVendas
+            // 
+            this.abaListarVendas.Location = new System.Drawing.Point(4, 44);
+            this.abaListarVendas.Name = "abaListarVendas";
+            this.abaListarVendas.Padding = new System.Windows.Forms.Padding(3);
+            this.abaListarVendas.Size = new System.Drawing.Size(974, 854);
+            this.abaListarVendas.TabIndex = 5;
+            this.abaListarVendas.Text = "tabPage6";
+            this.abaListarVendas.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -500,7 +549,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage abaNovoCliente;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage abaNovaVenda;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
@@ -519,6 +568,10 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TabPage abaNovoProduto;
+        private System.Windows.Forms.TabPage abaBuscaCliente;
+        private System.Windows.Forms.TabPage abaBuscaProduto;
+        private System.Windows.Forms.TabPage abaListarVendas;
     }
 }
 

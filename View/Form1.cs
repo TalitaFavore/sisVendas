@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SisVendas1.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,10 +23,25 @@ namespace SisVendas1
 
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void novoCliente(object sender, EventArgs e)
         {
-            tabControl1.Visible = true;
-            tabControl1.SelectedTab = tabPage2;
+            tabControl1.Visible = true; //Deixa visível um tabControl
+
+            abaNovoCliente.Parent = tabControl1; //Vincula um tabPage a um tabControl
+            tabControl1.SelectedTab = abaNovoCliente;
+
+            abaNovoProduto.Parent = null; //Desvincula um tabPage de um tabControl
+            abaNovaVenda.Parent = null;
+            abaBuscaCliente.Parent = null;
+            abaBuscaProduto.Parent = null;
+            abaListarVendas.Parent = null;
+
+        }
+
+        private void frmCidade(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            viewCidade frmCidade = new viewCidade();
+            frmCidade.ShowDialog();
         }
     }
 }
