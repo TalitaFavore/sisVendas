@@ -28,7 +28,7 @@ namespace SisVendas1.View
             controllerCidade cCidade = new controllerCidade();
 
             //armazenar os dados do FORM nos atributos
-            mCidade.NomeCidade = textBox1.Text;
+            mCidade.NomeCidade = textBox1.Text.ToUpper();
 
             //enviar os dados para o BD (método de cadastro)
             string res = cCidade.novaCidade(mCidade);

@@ -1,4 +1,7 @@
-﻿using SisVendas1.View;
+﻿using Npgsql;
+using SisVendas.Model;
+using SisVendas1.Controller;
+using SisVendas1.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,11 +19,6 @@ namespace SisVendas1
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void carregarPrincipal(object sender, EventArgs e)
-        {
-
         }
 
         private void novoCliente(object sender, EventArgs e)
@@ -42,6 +40,54 @@ namespace SisVendas1
         {
             viewCidade frmCidade = new viewCidade();
             frmCidade.ShowDialog();
+        }
+
+        private void carregaPrincipal(object sender, EventArgs e)
+        {
+            //evento load do form 1
+            carregaCombobox();
+
+        }
+
+        /* MÉTODOS DE CONFIGURAÇÃO DOS COMPONENTES DO FORM */
+
+        private void carregaCombobox()
+        {
+            controllerCidade cCidade = new controllerCidade();
+            NpgsqlDataReader dados = cCidade.listaCidade(); //tipo de dado que armaena o resultado de consultas no BD, não permite alteração, somente leitura
+
+            DataTable cidade = new DataTable(); //armazena dados no formato de tabela
+            cidade.Load(dados); //preenche o dataTable com os dados do dataReader
+
+            comboCidade_cliente.DataSource = cidade; //propriedade DataSource = define qual é a forma dos dados que a combobox vai usar
+            comboCidade_cliente.DisplayMember = "nomecidade"; //qual coluna vai ser exibida pela combobox
+            comboCidade_cliente.ValueMember = "idcidade"; //qual coluna será usada como valor válido na combobox
+
+
+
+        }
+
+        private void atualizaCombobox(object sender, EventArgs e)
+        {
+            carregaCombobox();
+        }
+
+        private void cadastrarCliente(object sender, EventArgs e)
+        {
+            modeloCliente mCliente = new modeloCliente();           
+            controllerCliente cCliente = new controllerCliente();
+
+            mCliente.Cpf = Convert.ToInt64(maskedTextBox1.Text);
+            mCliente.NomeCliente = textBox1.Text;
+            mCliente.Rg = textBox2.Text;
+            mCliente.Endereco = textBox3.Text;
+            mCliente.IdCidade = Convert.ToInt32(comboCidade_cliente.SelectedValue);
+            mCliente.Nascimento = dateTimePicker1.Value;
+            mCliente.Telefone = maskedTextBox2.Text;
+
+            string res = cCliente.cadastroCliente(mCliente);
+            MessageBox.Show(res);
+
         }
     }
 }

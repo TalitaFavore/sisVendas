@@ -97,6 +97,7 @@
   <ItemGroup>
     <Compile Include="Controller\Connection.cs" />
     <Compile Include="Controller\controllerCidade.cs" />
+    <Compile Include="Controller\controllerCliente.cs" />
     <Compile Include="View\Form1.cs">
       <SubType>Form</SubType>
     </Compile>

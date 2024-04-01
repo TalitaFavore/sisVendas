@@ -50,7 +50,7 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.abaNovoCliente = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnCadastrar_cliente = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
@@ -58,7 +58,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboCidade_cliente = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -270,7 +270,7 @@
             // abaNovoCliente
             // 
             this.abaNovoCliente.BackColor = System.Drawing.Color.MistyRose;
-            this.abaNovoCliente.Controls.Add(this.button3);
+            this.abaNovoCliente.Controls.Add(this.btnCadastrar_cliente);
             this.abaNovoCliente.Controls.Add(this.button2);
             this.abaNovoCliente.Controls.Add(this.button1);
             this.abaNovoCliente.Controls.Add(this.maskedTextBox2);
@@ -278,7 +278,7 @@
             this.abaNovoCliente.Controls.Add(this.dateTimePicker1);
             this.abaNovoCliente.Controls.Add(this.label6);
             this.abaNovoCliente.Controls.Add(this.linkLabel1);
-            this.abaNovoCliente.Controls.Add(this.comboBox1);
+            this.abaNovoCliente.Controls.Add(this.comboCidade_cliente);
             this.abaNovoCliente.Controls.Add(this.label5);
             this.abaNovoCliente.Controls.Add(this.textBox3);
             this.abaNovoCliente.Controls.Add(this.label4);
@@ -295,14 +295,15 @@
             this.abaNovoCliente.TabIndex = 0;
             this.abaNovoCliente.Text = "Cadastro de Cliente";
             // 
-            // button3
+            // btnCadastrar_cliente
             // 
-            this.button3.Location = new System.Drawing.Point(830, 518);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(105, 49);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "Salvar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnCadastrar_cliente.Location = new System.Drawing.Point(830, 518);
+            this.btnCadastrar_cliente.Name = "btnCadastrar_cliente";
+            this.btnCadastrar_cliente.Size = new System.Drawing.Size(105, 49);
+            this.btnCadastrar_cliente.TabIndex = 17;
+            this.btnCadastrar_cliente.Text = "Salvar";
+            this.btnCadastrar_cliente.UseVisualStyleBackColor = true;
+            this.btnCadastrar_cliente.Click += new System.EventHandler(this.cadastrarCliente);
             // 
             // button2
             // 
@@ -367,13 +368,14 @@
             this.linkLabel1.Text = "Nova Cidade";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.frmCidade);
             // 
-            // comboBox1
+            // comboCidade_cliente
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(187, 303);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(592, 43);
-            this.comboBox1.TabIndex = 9;
+            this.comboCidade_cliente.FormattingEnabled = true;
+            this.comboCidade_cliente.Location = new System.Drawing.Point(187, 303);
+            this.comboCidade_cliente.Name = "comboCidade_cliente";
+            this.comboCidade_cliente.Size = new System.Drawing.Size(592, 43);
+            this.comboCidade_cliente.TabIndex = 9;
+            this.comboCidade_cliente.Click += new System.EventHandler(this.atualizaCombobox);
             // 
             // label5
             // 
@@ -513,7 +515,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.carregarPrincipal);
+            this.Load += new System.EventHandler(this.carregaPrincipal);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
@@ -555,7 +557,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboCidade_cliente;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
@@ -565,7 +567,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnCadastrar_cliente;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TabPage abaNovoProduto;

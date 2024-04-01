@@ -37,7 +37,7 @@ namespace SisVendas1.Controller
 
         public NpgsqlDataReader listaCidade() //Espelho do BD no software
         {
-            string sql = "select * from cidade"; 
+            string sql = "select * from cidade order by nomecidade"; 
             Connection conexao = new Connection(); 
             NpgsqlConnection conn = conexao.conectaPG(); 
             NpgsqlCommand comm = new NpgsqlCommand(sql, conn);
