@@ -48,6 +48,23 @@ namespace SisVendas1
             carregaCombobox();
 
         }
+        private void atualizaCombobox(object sender, EventArgs e)
+        {
+            carregaCombobox();
+        }
+
+        private void salvarCliente(object sender, EventArgs e)
+        {
+            if (validarForm())
+            {
+                // Salvar o cadastro
+                cadastrarCliente();
+            }
+            else
+            {
+                MessageBox.Show("Por favor, preencha todos os campos.", "Campos vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
 
         /* MÉTODOS DE CONFIGURAÇÃO DOS COMPONENTES DO FORM */
 
@@ -62,19 +79,11 @@ namespace SisVendas1
             comboCidade_cliente.DataSource = cidade; //propriedade DataSource = define qual é a forma dos dados que a combobox vai usar
             comboCidade_cliente.DisplayMember = "nomecidade"; //qual coluna vai ser exibida pela combobox
             comboCidade_cliente.ValueMember = "idcidade"; //qual coluna será usada como valor válido na combobox
-
-
-
         }
 
-        private void atualizaCombobox(object sender, EventArgs e)
+        private void cadastrarCliente()
         {
-            carregaCombobox();
-        }
-
-        private void cadastrarCliente(object sender, EventArgs e)
-        {
-            modeloCliente mCliente = new modeloCliente();           
+            modeloCliente mCliente = new modeloCliente();
             controllerCliente cCliente = new controllerCliente();
 
             mCliente.Cpf = Convert.ToInt64(maskedTextBox1.Text);
@@ -87,7 +96,51 @@ namespace SisVendas1
 
             string res = cCliente.cadastroCliente(mCliente);
             MessageBox.Show(res);
+        }
 
+        private bool validarForm()
+            {
+                // Verifica se todos os campos estão preenchidos
+                if (String.IsNullOrWhiteSpace(textBox1.Text))
+                {
+                    errorProvider1.Clear();
+                    errorProvider1.SetError(textBox1, "Preencha o Campo");
+                    textBox1.Focus();
+                    return false;
+                } 
+                else if (String.IsNullOrWhiteSpace(maskedTextBox1.Text))
+                {
+                    errorProvider1.Clear();
+                    errorProvider1.SetError(maskedTextBox1, "Preencha o Campo");
+                    maskedTextBox1.Focus();
+                    return false;
+                }
+                else if (String.IsNullOrWhiteSpace(textBox2.Text))
+                {
+                    errorProvider1.Clear();
+                    errorProvider1.SetError(textBox2, "Preencha o Campo");
+                    textBox2.Focus();
+                    return false;
+                }
+                else if (String.IsNullOrWhiteSpace(textBox3.Text))
+                {
+                    errorProvider1.Clear();
+                    errorProvider1.SetError(textBox3, "Preencha o Campo");
+                    textBox3.Focus();
+                    return false;
+                }
+                else if (String.IsNullOrWhiteSpace(maskedTextBox2.Text))
+                {
+                    errorProvider1.Clear();
+                    errorProvider1.SetError(maskedTextBox2, "Preencha o Campo");
+                    maskedTextBox2.Focus();
+                    return false;
+                }
+                else
+                {
+                    errorProvider1.Clear();
+                    return true;
+                }
+            }
         }
     }
-}

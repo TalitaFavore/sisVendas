@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.item1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,10 +74,12 @@
             this.abaBuscaCliente = new System.Windows.Forms.TabPage();
             this.abaBuscaProduto = new System.Windows.Forms.TabPage();
             this.abaListarVendas = new System.Windows.Forms.TabPage();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.abaNovoCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -300,17 +303,17 @@
             this.btnCadastrar_cliente.Location = new System.Drawing.Point(830, 518);
             this.btnCadastrar_cliente.Name = "btnCadastrar_cliente";
             this.btnCadastrar_cliente.Size = new System.Drawing.Size(105, 49);
-            this.btnCadastrar_cliente.TabIndex = 17;
+            this.btnCadastrar_cliente.TabIndex = 9;
             this.btnCadastrar_cliente.Text = "Salvar";
             this.btnCadastrar_cliente.UseVisualStyleBackColor = true;
-            this.btnCadastrar_cliente.Click += new System.EventHandler(this.cadastrarCliente);
+            this.btnCadastrar_cliente.Click += new System.EventHandler(this.salvarCliente);
             // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(423, 518);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(147, 49);
-            this.button2.TabIndex = 16;
+            this.button2.TabIndex = 8;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
             // 
@@ -319,7 +322,7 @@
             this.button1.Location = new System.Drawing.Point(58, 518);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(102, 49);
-            this.button1.TabIndex = 15;
+            this.button1.TabIndex = 7;
             this.button1.Text = "Novo";
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -329,7 +332,7 @@
             this.maskedTextBox2.Mask = "(00)00000-0000";
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(214, 42);
-            this.maskedTextBox2.TabIndex = 14;
+            this.maskedTextBox2.TabIndex = 6;
             // 
             // label7
             // 
@@ -346,7 +349,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(210, 393);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(216, 42);
-            this.dateTimePicker1.TabIndex = 12;
+            this.dateTimePicker1.TabIndex = 5;
             // 
             // label6
             // 
@@ -374,7 +377,7 @@
             this.comboCidade_cliente.Location = new System.Drawing.Point(187, 303);
             this.comboCidade_cliente.Name = "comboCidade_cliente";
             this.comboCidade_cliente.Size = new System.Drawing.Size(592, 43);
-            this.comboCidade_cliente.TabIndex = 9;
+            this.comboCidade_cliente.TabIndex = 4;
             this.comboCidade_cliente.Click += new System.EventHandler(this.atualizaCombobox);
             // 
             // label5
@@ -391,7 +394,7 @@
             this.textBox3.Location = new System.Drawing.Point(187, 214);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(775, 42);
-            this.textBox3.TabIndex = 7;
+            this.textBox3.TabIndex = 3;
             // 
             // label4
             // 
@@ -407,7 +410,7 @@
             this.textBox2.Location = new System.Drawing.Point(492, 123);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(206, 42);
-            this.textBox2.TabIndex = 5;
+            this.textBox2.TabIndex = 2;
             // 
             // label3
             // 
@@ -424,7 +427,7 @@
             this.maskedTextBox1.Mask = "000,000,000-00";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(206, 42);
-            this.maskedTextBox1.TabIndex = 3;
+            this.maskedTextBox1.TabIndex = 1;
             this.maskedTextBox1.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label2
@@ -441,7 +444,7 @@
             this.textBox1.Location = new System.Drawing.Point(238, 39);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(724, 42);
-            this.textBox1.TabIndex = 1;
+            this.textBox1.TabIndex = 0;
             // 
             // label1
             // 
@@ -502,6 +505,10 @@
             this.abaListarVendas.Text = "tabPage6";
             this.abaListarVendas.UseVisualStyleBackColor = true;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 35F);
@@ -523,6 +530,7 @@
             this.tabControl1.ResumeLayout(false);
             this.abaNovoCliente.ResumeLayout(false);
             this.abaNovoCliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -574,6 +582,7 @@
         private System.Windows.Forms.TabPage abaBuscaCliente;
         private System.Windows.Forms.TabPage abaBuscaProduto;
         private System.Windows.Forms.TabPage abaListarVendas;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 
