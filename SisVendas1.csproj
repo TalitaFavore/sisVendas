@@ -95,9 +95,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\controllerItensVenda.cs" />
+    <Compile Include="Controller\controllerVenda.cs" />
     <Compile Include="Controller\Connection.cs" />
     <Compile Include="Controller\controllerCidade.cs" />
     <Compile Include="Controller\controllerCliente.cs" />
+    <Compile Include="Controller\controllerFornecedor.cs" />
+    <Compile Include="Controller\controllerMarca.cs" />
+    <Compile Include="Controller\controllerProduto.cs" />
+    <Compile Include="Controller\controllerTipoProduto.cs" />
     <Compile Include="View\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,24 @@
     <Compile Include="View\viewCidade.Designer.cs">
       <DependentUpon>viewCidade.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\viewFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\viewFornecedor.Designer.cs">
+      <DependentUpon>viewFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\viewMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\viewMarca.Designer.cs">
+      <DependentUpon>viewMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\viewTipoProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\viewTipoProduto.Designer.cs">
+      <DependentUpon>viewTipoProduto.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -135,6 +159,15 @@
     <EmbeddedResource Include="View\viewCidade.resx">
       <DependentUpon>viewCidade.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\viewFornecedor.resx">
+      <DependentUpon>viewFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\viewMarca.resx">
+      <DependentUpon>viewMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\viewTipoProduto.resx">
+      <DependentUpon>viewTipoProduto.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -149,15 +182,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="img\cidade.jpg" />
-    <Content Include="img\cliente.jpg" />
-    <Content Include="img\fornecedor.jpg" />
-    <Content Include="img\marca.jpg" />
-    <Content Include="img\produto.jpg" />
-    <Content Include="img\tipoProduto.jpg" />
-    <Content Include="img\venda.jpg" />
+    <Content Include="img\caminhao.png" />
+    <Content Include="img\check-box.png" />
+    <Content Include="img\cidade.png" />
+    <Content Include="img\produto.png" />
+    <Content Include="img\tag.png" />
+    <Content Include="img\user.png" />
+    <Content Include="img\venda.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

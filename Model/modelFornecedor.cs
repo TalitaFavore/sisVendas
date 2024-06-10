@@ -6,61 +6,20 @@ using System.Threading.Tasks;
 
 namespace SisVendas.Model
 {
-    internal class modeloFornecedor
+    class modeloFornecedor
     {
-        private String cnpj;
-        private String nomeFornecedor;
-        private String enderecoFornecedor;
-        private String telefoneFornecedor;
-        private String emailFornecedor;
+        private string cnpj;
+        private string nomeFornecedor;
+        private string endereco;
+        private string telefone;
+        private string email;
         private int idCidade;
 
-        #region Cnpj
-        public String Cnpj
-        {
-            get => cnpj;
-            set => cnpj = value;
-        }
-        #endregion
-
-        #region NomeFornecedor
-        public String NomeFornecedor
-        {
-            get => nomeFornecedor;
-            set => nomeFornecedor = value;
-        }
-        #endregion
-
-        #region EnderecoFornecedor
-        public String EnderecoFornecedor
-        {
-            get => enderecoFornecedor;
-            set => enderecoFornecedor = value;
-        }
-        #endregion
-
-        #region TelefoneFornecedor
-        public String TelefoneFornecedor
-        {
-            get => telefoneFornecedor;
-            set => telefoneFornecedor = value;
-        }
-        #endregion
-
-        #region EmailFornecedor
-        public String EmailFornecedor
-        {
-            get => emailFornecedor;
-            set => emailFornecedor = value;
-        }
-        #endregion
-
-        #region IdCidade
-        public int IdCidade
-        {
-            get => idCidade;
-            set => idCidade = value;
-        }
-        #endregion
+        public string Cnpj { get => cnpj; set => cnpj = value; }
+        public string NomeFornecedor { get => nomeFornecedor; set => nomeFornecedor = value; }
+        public string Endereco { get => endereco; set => endereco = value; }
+        public string Telefone { get => telefone; set => telefone = value; }
+        public string Email { get => email; set => email = value; }
+        public int IdCidade { get => idCidade; set => idCidade = value; }
     }
 }

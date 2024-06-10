@@ -11,7 +11,7 @@ namespace SisVendas.Model
         private int idVenda;
         private String idProduto;
         private int quantidade;
-        private float valorTotal;
+        private decimal valorTotal;
 
         #region IdVenda
         public int IdVenda
@@ -38,7 +38,7 @@ namespace SisVendas.Model
         #endregion
 
         #region ValorTotal
-        public float ValorTotal
+        public decimal ValorTotal
         {
             get => valorTotal;
             set => valorTotal = value;

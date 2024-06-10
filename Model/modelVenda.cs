@@ -11,7 +11,7 @@ namespace SisVendas.Model
         private int idVenda;
         private long cpfCliente;
         private DateTime dataVenda;
-        private float totalVenda;
+        private decimal totalVenda;
 
         #region IdVenda
         public int IdVenda
@@ -38,7 +38,7 @@ namespace SisVendas.Model
         #endregion
 
         #region TotalVenda
-        public float TotalVenda
+        public decimal TotalVenda
         {
             get => totalVenda;
             set => totalVenda = value;

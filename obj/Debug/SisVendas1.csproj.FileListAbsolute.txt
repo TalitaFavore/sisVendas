@@ -85,3 +85,6 @@ C:\Users\Talita\Desktop\C#\SisVendas1\obj\Debug\SisVendas1.csproj.CoreCompileInp
 C:\Users\Talita\Desktop\C#\SisVendas1\obj\Debug\SisVendas1.csproj.Up2Date
 C:\Users\Talita\Desktop\C#\SisVendas1\obj\Debug\SisVendas1.exe
 C:\Users\Talita\Desktop\C#\SisVendas1\obj\Debug\SisVendas1.pdb
+C:\Users\Talita\Desktop\C#\SisVendas1\obj\Debug\SisVendas1.View.viewFornecedor.resources
+C:\Users\Talita\Desktop\C#\SisVendas1\obj\Debug\SisVendas1.View.viewMarca.resources
+C:\Users\Talita\Desktop\C#\SisVendas1\obj\Debug\SisVendas1.View.viewTipoProduto.resources

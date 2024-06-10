@@ -1,0 +1,13 @@
+# Ignore a pasta .vs do Visual Studio
+.vs/
+
+# Ignore outros arquivos comuns que não devem ser versionados
+*.log
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+
+# Ignore diretórios de compilação
+bin/
+obj/

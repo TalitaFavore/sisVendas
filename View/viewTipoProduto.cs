@@ -1,33 +1,28 @@
-﻿using System;
-using System.Windows.Forms;
-using SisVendas.Controller;
-using SisVendas.Model;
-using Npgsql;
+﻿using SisVendas.Model;
 using SisVendas1.Controller;
+using System;
+using System.Windows.Forms;
 
 namespace SisVendas1.View
 {
-    public partial class viewCidade : Form
+    public partial class viewTipoProduto : Form
     {
-        public viewCidade()
+        public viewTipoProduto()
         {
             InitializeComponent();
         }
-
-        private void novaCidade(object sender, EventArgs e)
+        private void novoTipo(object sender, EventArgs e)
         {
-            modeloCidade mCidade = new modeloCidade();
-            controllerCidade cCidade = new controllerCidade();
-            if (validarFormCidade())
+            modeloTipoProduto mTipoProduto = new modeloTipoProduto();
+            controllerTipoProduto cTipoProduto = new controllerTipoProduto();
+
+            if (validarFormTipo())
             {
-            //armazenar os dados do FORM nos atributos
-            mCidade.NomeCidade = textBox1.Text.ToUpper();
+                mTipoProduto.NomeTipo = textBox1.Text.ToUpper();
 
-            //enviar os dados para o BD (método de cadastro)
-            string res = cCidade.novaCidade(mCidade);
+                string res = cTipoProduto.novoTipo(mTipoProduto);
 
-            MessageBox.Show(res);
-
+                MessageBox.Show(res);
             }
             else
             {
@@ -35,7 +30,7 @@ namespace SisVendas1.View
             }
         }
 
-        private bool validarFormCidade()
+        private bool validarFormTipo()
         {
             // Verifica se todos os campos estão preenchidos
             if (String.IsNullOrWhiteSpace(textBox1.Text))
@@ -52,14 +47,14 @@ namespace SisVendas1.View
             }
         }
 
-        private void limparCidade(object sender, EventArgs e)
+        private void limparFormTipo(object sender, EventArgs e)
         {
             textBox1.Text = "";
         }
 
         private void fechaForm(object sender, EventArgs e)
         {
-                this.Dispose();
+            this.Dispose();
         }
     }
 }

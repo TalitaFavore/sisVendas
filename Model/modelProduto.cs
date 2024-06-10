@@ -6,81 +6,28 @@ using System.Threading.Tasks;
 
 namespace SisVendas.Model
 {
-    internal class modeloProduto
+    class modelProduto
     {
-        private String codigoBarras;
-        private String nomeProduto;
+        private string codigoBarras;
+        private string nomeProduto;
         private DateTime validade;
-        private float precoCusto;
-        private float precoVenda;
-        private String descricao;
+        private decimal precoCusto;
+        private decimal precoVenda;
+        private string descricao;
         private int quantidade;
         private int idTipo;
+        private int idMarca;
+        private string cnpj;
 
-        #region CodigoBarras
-        public String CodigoBarras
-        {
-            get => codigoBarras;
-            set => codigoBarras = value;
-        }
-        #endregion
-
-        #region NomeProduto
-        public String NomeProduto
-        {
-            get => nomeProduto;
-            set => nomeProduto = value;
-        }
-        #endregion
-
-        #region Validade
-        public DateTime Validade
-        {
-            get => validade;
-            set => validade = value;
-        }
-        #endregion
-
-        #region PrecoCusto
-        public float PrecoCusto
-        {
-            get => precoCusto;
-            set => precoCusto = value;
-        }
-        #endregion
-
-        #region PrecoCusto
-        public float PrecoVenda
-        {
-            get => precoVenda;
-            set => precoVenda = value;
-        }
-        #endregion
-
-        #region Descricao
-        public string Descricao
-        {
-            get => descricao;
-            set => descricao = value;
-        }
-        #endregion
-
-        #region Quantidade
-        public int Quantidade
-        {
-            get => quantidade;
-            set => quantidade = value;
-        }
-        #endregion
-
-        #region IdTipo
-        public int IdTipo
-        {
-            get => idTipo;
-            set => idTipo = value;
-        }
-        #endregion
+        public string CodigoBarras { get => codigoBarras; set => codigoBarras = value; }
+        public string NomeProduto { get => nomeProduto; set => nomeProduto = value; }
+        public DateTime Validade { get => validade; set => validade = value; }
+        public decimal PrecoCusto { get => precoCusto; set => precoCusto = value; }
+        public decimal PrecoVenda { get => precoVenda; set => precoVenda = value; }
+        public string Descricao { get => descricao; set => descricao = value; }
+        public int Quantidade { get => quantidade; set => quantidade = value; }
+        public int IdTipo { get => idTipo; set => idTipo = value; }
+        public int IdMarca { get => idMarca; set => idMarca = value; }
+        public string Cnpj { get => cnpj; set => cnpj = value; }
     }
-
-
 }
