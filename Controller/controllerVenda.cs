@@ -58,8 +58,47 @@ namespace SisVendas1.Controller
                 MessageBox.Show("Erro ao atualizar a venda: " + ex.Message);
                 return null;
             }
+        }
 
+        public NpgsqlDataReader pesquisaVendaCliente(modeloVenda mVenda)
+        {
+            string sql = "select idvenda, datavenda, totalvenda from venda inner join cliente on venda.cpfcliente = cliente.cpf where cpf = @cpfcliente";
 
+            Connection conexao = new Connection();
+            NpgsqlConnection conn = conexao.conectaPG();
+            NpgsqlCommand comm = new NpgsqlCommand(sql, conn);
+
+            try
+            {
+                comm.Parameters.AddWithValue("@cpfcliente", mVenda.CpfCliente);
+
+                return comm.ExecuteReader();
+            }
+            catch (NpgsqlException erro)
+            {
+                return null;
+            }
+
+        }
+
+        public NpgsqlDataReader listaItensVenda(modeloVenda mVenda)
+        {
+            string sql = "SELECT itensvenda.codigobarras,produto.nomeProduto, produto.descricao,itensvenda.quantidade, itensvenda.valortotal  FROM     itensvenda INNER JOIN     produto ON     itensvenda.codigobarras = produto.codigobarras WHERE     itensvenda.idvenda = @idvenda;";
+
+            Connection conexao = new Connection();
+            NpgsqlConnection conn = conexao.conectaPG();
+            NpgsqlCommand comm = new NpgsqlCommand(sql, conn);
+
+            try
+            {
+                comm.Parameters.AddWithValue("@idvenda", mVenda.IdVenda);
+
+                return comm.ExecuteReader();
+            }
+            catch (NpgsqlException erro)
+            {
+                return null;
+            }
         }
     }
 }

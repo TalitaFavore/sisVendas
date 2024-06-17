@@ -476,7 +476,6 @@ namespace SisVendas1
                 dataGridView1.Rows.Add(linha);
             }
         }
-
         private void buscaProduto(object sender, EventArgs e)
         {
             /* Executa pesquisa de produto*/
@@ -490,12 +489,12 @@ namespace SisVendas1
                 if (radioNomeProduto.Checked)
                 {
                     mProduto.NomeProduto = maskedTextBox4.Text + "%";
-                    produto = cProduto.pesqProdutoNome(mProduto);
+                    produto = cProduto.pesqProdutoCodigo(mProduto);
                     gridProduto(produto);
                 }
                 else if (radioProdutoBarras.Checked)
                 {
-                    if (maskedTextBox4.Text.Length == 11)
+                    if (maskedTextBox4.Text.Length == 13)
                     {
                         mProduto.CodigoBarras = maskedTextBox4.Text;
                         produto = cProduto.pesqProdutoCodigo(mProduto);
@@ -535,7 +534,6 @@ namespace SisVendas1
                 dataGridView2.Rows.Add(linha);
             }
         }
-
         private void buscaClienteVenda(object sender, KeyPressEventArgs e)
         {
             modeloCliente mCliente = new modeloCliente();
@@ -562,7 +560,6 @@ namespace SisVendas1
                 }
             }
         }
-
         private void buscaProdutoVenda(object sender, KeyPressEventArgs e)
         {
                 modelProduto mProduto = new modelProduto();
@@ -621,7 +618,142 @@ namespace SisVendas1
                 dataGridView3.Rows.Add(linha);
             }
         }
+        private void buscaClienteListarVenda(object sender, KeyPressEventArgs e)
+        {
+            modeloCliente mCliente = new modeloCliente();
+            controllerCliente cCliente = new controllerCliente();
+            NpgsqlDataReader cliente;
+            if (e.KeyChar == 13)
+            {
+                if (!String.IsNullOrWhiteSpace(maskedTextBoxVendaCliente.Text))
+                {
+                    if (radioButtonVendasNomeCliente.Checked)
+                    {
+                        mCliente.NomeCliente = maskedTextBoxVendaCliente.Text + "%";
+                        cliente = cCliente.pesqClienteNome(mCliente);
+                        gridLisatrVendaCliente(cliente);
+                    }
+                    else if (radioButtonVendasCpf.Checked)
+                    {
+                        if (maskedTextBoxVendaCliente.Text.Length == 11)
+                        {
+                            mCliente.Cpf = long.Parse(maskedTextBoxVendaCliente.Text);
+                            cliente = cCliente.pesqClienteCPF(mCliente);
+                            gridLisatrVendaCliente(cliente);
+                        }
+                        else
+                        {
+                            cliente = null;
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("compo esta errado");
+                    }
+                }
+            }
+        }
+        private void gridLisatrVendaCliente(NpgsqlDataReader dados)
+        {
+            {   //apara as colunas da tabela
+                dataGridViewListarVEndasCliente.Columns.Clear();
 
+                // define a quantidade de coluna da grid = DataReader
+                dataGridViewListarVEndasCliente.ColumnCount = dados.FieldCount;
+
+                //definir os nomes da colunas da grid
+                for (int i = 0; i < dados.FieldCount; i++)
+                {
+                    dataGridViewListarVEndasCliente.Columns[i].Name = dados.GetName(i);
+                }
+                string[] linha = new string[dados.FieldCount];
+                while (dados.Read())
+                {
+                    for (int i = 0; i < dados.FieldCount; i++)
+                    {
+                        linha[i] = dados.GetValue(i).ToString();
+                    }
+                    dataGridViewListarVEndasCliente.Rows.Add(linha);
+                }
+            }
+        }
+        private void consultarVendas(object sender, EventArgs e)
+        {
+            tabControl1.Visible = true;
+            abaListarVendas.Parent = tabControl1;
+            tabControl1.SelectedTab = abaListarVendas;
+
+            abaNovoCliente.Parent = null;
+            abaNovoProduto.Parent = null;
+            abaNovaVenda.Parent = null;
+            abaBuscaCliente.Parent = null;
+            abaBuscaProduto.Parent = null;
+        }
+        private void ListarItensVenda(object sender, DataGridViewCellEventArgs e)
+        {
+            modeloVenda mVenda = new modeloVenda();
+
+            mVenda.IdVenda = int.Parse(dataGridViewListarVenda.CurrentRow.Cells[0].Value.ToString());
+            controllerVenda cVenda = new controllerVenda();
+
+            NpgsqlDataReader itensVendas = cVenda.listaItensVenda(mVenda);
+            gridItensVendas(itensVendas);
+        }
+        private void gridItensVendas(NpgsqlDataReader dados)
+        {
+            {
+                //apara as colunas da tabela
+                dataGridViewItensVenda.Columns.Clear();
+
+                // define a quantidade de coluna da grid = DataReader
+                dataGridViewItensVenda.ColumnCount = dados.FieldCount;
+
+                //definir os nomes da colunas da grid
+                for (int i = 0; i < dados.FieldCount; i++)
+                {
+                    dataGridViewItensVenda.Columns[i].Name = dados.GetName(i);
+                }
+
+                string[] linha = new string[dados.FieldCount];
+
+                while (dados.Read())
+                {
+                    for (int i = 0; i < dados.FieldCount; i++)
+                    {
+                        linha[i] = dados.GetValue(i).ToString();
+                    }
+                    dataGridViewItensVenda.Rows.Add(linha);
+                }
+            }
+        }
+        private void gridVendas(NpgsqlDataReader dados)
+        {
+            {
+                //apara as colunas da tabela
+                dataGridViewListarVenda.Columns.Clear();
+
+                // define a quantidade de coluna da grid = DataReader
+                dataGridViewListarVenda.ColumnCount = dados.FieldCount;
+
+                //definir os nomes da colunas da grid
+                for (int i = 0; i < dados.FieldCount; i++)
+                {
+                    dataGridViewListarVenda.Columns[i].Name = dados.GetName(i);
+                }
+
+                string[] linha = new string[dados.FieldCount];
+
+                while (dados.Read())
+                {
+                    for (int i = 0; i < dados.FieldCount; i++)
+                    {
+                        linha[i] = dados.GetValue(i).ToString();
+                    }
+                    dataGridViewListarVenda.Rows.Add(linha);
+                }
+            }
+        }
         private void maskNome(object sender, EventArgs e)
         {
             maskedTextBox5.Mask = null;
@@ -629,6 +761,10 @@ namespace SisVendas1
         private void maskCPF(object sender, EventArgs e)
         {
             maskedTextBox5.Mask = "000,000,000-00";
+        }
+        private void maskTextBoxVendaCliente(object sender, EventArgs e)
+        {
+            maskedTextBoxVendaCliente.Mask = "000,000,000-00";
         }
 
         //Eventos da venda
@@ -778,6 +914,19 @@ namespace SisVendas1
             dataGridView4.Rows.Add(produto);
             lbTotalItens.Text = total.ToString();
             lbTotalVenda.Text = total.ToString();
+        }
+
+        private void addListarVendas(object sender, DataGridViewCellEventArgs e)
+        {
+            modeloVenda mVenda = new modeloVenda();
+
+            mVenda.CpfCliente = Convert.ToInt64(dataGridViewListarVEndasCliente.CurrentRow.Cells[1].Value.ToString());
+
+            controllerVenda cVenda = new controllerVenda();
+
+            NpgsqlDataReader vendas = cVenda.pesquisaVendaCliente(mVenda);
+            gridVendas(vendas);
+
         }
     }
     }

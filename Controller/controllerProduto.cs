@@ -74,13 +74,12 @@ namespace SisVendas1.Controller
         public NpgsqlDataReader pesqProdutoCodigo(modelProduto mProduto)
 
         {
-            string sql = "select pr.codigobarras as \"Código de Barras\", pr.nomeproduto as \"Nome\", " +
-                "pr.precocusto as \"Preço de custo\", pr.validade as \"Validade\", pr.descricao as \"Descrição\", " +
-                "pr.precovenda as \"Preço de Venda\", pr.quantidadeproduto as \"Quantidade\", ma.nomemarca as \"Marca\", " +
-                "ti.nometipo \"Tipo\", fo.nomefornecedor as \"Fornecedor\" from produto pr " +
-                "inner join fornecedor fo on pr.cnpj = fo.cnpj inner join marca ma " +
-                "on pr.idmarca = ma.idmarca inner join tipoproduto ti on pr.idtipo = ti.idtipo " +
-                "where pr.codigobarras = @codigobarras order by nomeproduto";
+            string sql = "SELECT p.nomeproduto AS \"Produto\",  p.codigobarras AS \"Código de Barras\", " +
+                "p.validade AS \"Validade\",p.precocusto AS \"Preço de Custo\",p.precovenda AS \"Preço de Venda\", " +
+                "p.descricao AS \"Descrição\",p.quantidadeProduto AS \"Quantidade\",f.nomefornecedor AS \"Fornecedor\",tp.nometipo" +
+                " AS \"Tipo\",m.nomemarca AS \"Marca\" FROM produto p INNER JOIN fornecedor f ON p.cnpj = f.cnpj " +
+                "INNER JOIN tipoproduto tp ON p.idtipo = tp.idtipo INNER JOIN marca m ON p.idmarca = m.idmarca " +
+                "WHERE p.codigobarras = @codigobarras";
 
             Connection conexao = new Connection();
             NpgsqlConnection conn = conexao.conectaPG();

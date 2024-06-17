@@ -183,11 +183,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="img\caminhao.png" />
-    <Content Include="img\check-box.png" />
-    <Content Include="img\cidade.png" />
+    <Content Include="img\buscaProduto.png" />
+    <Content Include="img\buscaUsuario.png" />
+    <Content Include="img\listaVenda.png" />
     <Content Include="img\produto.png" />
-    <Content Include="img\tag.png" />
+    <Content Include="img\sisvendas.ico" />
     <Content Include="img\user.png" />
     <Content Include="img\venda.png" />
   </ItemGroup>

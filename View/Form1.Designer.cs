@@ -78,7 +78,6 @@
             this.label23 = new System.Windows.Forms.Label();
             this.lbTotalItens = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -141,6 +140,20 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.abaListarVendas = new System.Windows.Forms.TabPage();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.maskedTextBoxVendaCliente = new System.Windows.Forms.MaskedTextBox();
+            this.radioButtonVendasCpf = new System.Windows.Forms.RadioButton();
+            this.radioButtonVendasNomeCliente = new System.Windows.Forms.RadioButton();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.dataGridViewListarVenda = new System.Windows.Forms.DataGridView();
+            this.dataGridViewListarVEndasCliente = new System.Windows.Forms.DataGridView();
+            this.dataGridViewItensVenda = new System.Windows.Forms.DataGridView();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -158,7 +171,12 @@
             this.abaBuscaProduto.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.abaListarVendas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListarVenda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListarVEndasCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItensVenda)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -278,12 +296,16 @@
             this.toolStripButton2,
             this.toolStripSeparator2,
             this.toolStripButton3,
-            this.toolStripSeparator3,
+            this.toolStripSeparator4,
             this.toolStripButton4,
-            this.toolStripButton5});
+            this.toolStripSeparator3,
+            this.toolStripButton5,
+            this.toolStripSeparator6,
+            this.toolStripButton6,
+            this.toolStripSeparator5});
             this.toolStrip1.Location = new System.Drawing.Point(0, 41);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(107, 944);
+            this.toolStrip1.Size = new System.Drawing.Size(109, 944);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -293,7 +315,7 @@
             this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(104, 56);
+            this.toolStripButton1.Size = new System.Drawing.Size(106, 56);
             this.toolStripButton1.Text = "Novo Cliente";
             this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton1.Click += new System.EventHandler(this.novoCliente);
@@ -301,7 +323,7 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(104, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(106, 6);
             // 
             // toolStripButton2
             // 
@@ -309,7 +331,7 @@
             this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(104, 56);
+            this.toolStripButton2.Size = new System.Drawing.Size(106, 56);
             this.toolStripButton2.Text = "Novo Produto";
             this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton2.Click += new System.EventHandler(this.novoProduto);
@@ -317,7 +339,7 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(104, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(106, 6);
             // 
             // toolStripButton3
             // 
@@ -325,7 +347,7 @@
             this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(104, 56);
+            this.toolStripButton3.Size = new System.Drawing.Size(106, 56);
             this.toolStripButton3.Text = "Nova Venda";
             this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton3.Click += new System.EventHandler(this.novaVenda);
@@ -333,26 +355,28 @@
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(104, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(106, 6);
             // 
             // toolStripButton4
             // 
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(104, 24);
-            this.toolStripButton4.Text = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(106, 88);
+            this.toolStripButton4.Text = "Busca Cliente";
+            this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton4.Click += new System.EventHandler(this.consultaCliente);
             // 
             // toolStripButton5
             // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(104, 24);
-            this.toolStripButton5.Text = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(106, 88);
+            this.toolStripButton5.Text = "Busca Produto";
+            this.toolStripButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton5.Click += new System.EventHandler(this.consultaProduto);
             // 
             // tabControl1
@@ -369,7 +393,7 @@
             this.tabControl1.Location = new System.Drawing.Point(110, 41);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1331, 878);
+            this.tabControl1.Size = new System.Drawing.Size(1365, 878);
             this.tabControl1.TabIndex = 2;
             this.tabControl1.Visible = false;
             // 
@@ -569,7 +593,6 @@
             this.abaNovaVenda.Controls.Add(this.label23);
             this.abaNovaVenda.Controls.Add(this.lbTotalItens);
             this.abaNovaVenda.Controls.Add(this.label21);
-            this.abaNovaVenda.Controls.Add(this.button10);
             this.abaNovaVenda.Controls.Add(this.button9);
             this.abaNovaVenda.Controls.Add(this.button8);
             this.abaNovaVenda.Controls.Add(this.groupBox5);
@@ -578,7 +601,7 @@
             this.abaNovaVenda.Location = new System.Drawing.Point(4, 44);
             this.abaNovaVenda.Name = "abaNovaVenda";
             this.abaNovaVenda.Padding = new System.Windows.Forms.Padding(3);
-            this.abaNovaVenda.Size = new System.Drawing.Size(1323, 830);
+            this.abaNovaVenda.Size = new System.Drawing.Size(1357, 830);
             this.abaNovaVenda.TabIndex = 1;
             this.abaNovaVenda.Text = "Nova Venda";
             // 
@@ -634,15 +657,6 @@
             this.label21.Size = new System.Drawing.Size(185, 35);
             this.label21.TabIndex = 18;
             this.label21.Text = "Total dos Itens:";
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(1171, 298);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(136, 37);
-            this.button10.TabIndex = 17;
-            this.button10.Text = "button10";
-            this.button10.UseVisualStyleBackColor = true;
             // 
             // button9
             // 
@@ -875,7 +889,7 @@
             this.abaNovoProduto.Location = new System.Drawing.Point(4, 44);
             this.abaNovoProduto.Name = "abaNovoProduto";
             this.abaNovoProduto.Padding = new System.Windows.Forms.Padding(3);
-            this.abaNovoProduto.Size = new System.Drawing.Size(1323, 830);
+            this.abaNovoProduto.Size = new System.Drawing.Size(1357, 830);
             this.abaNovoProduto.TabIndex = 2;
             this.abaNovoProduto.Text = "Cadastro Produto";
             // 
@@ -1119,7 +1133,7 @@
             this.abaBuscaCliente.Location = new System.Drawing.Point(4, 44);
             this.abaBuscaCliente.Name = "abaBuscaCliente";
             this.abaBuscaCliente.Padding = new System.Windows.Forms.Padding(3);
-            this.abaBuscaCliente.Size = new System.Drawing.Size(1323, 830);
+            this.abaBuscaCliente.Size = new System.Drawing.Size(1357, 830);
             this.abaBuscaCliente.TabIndex = 3;
             this.abaBuscaCliente.Text = "Busca Cliente";
             // 
@@ -1202,7 +1216,7 @@
             this.abaBuscaProduto.Location = new System.Drawing.Point(4, 44);
             this.abaBuscaProduto.Name = "abaBuscaProduto";
             this.abaBuscaProduto.Padding = new System.Windows.Forms.Padding(3);
-            this.abaBuscaProduto.Size = new System.Drawing.Size(1323, 830);
+            this.abaBuscaProduto.Size = new System.Drawing.Size(1357, 830);
             this.abaBuscaProduto.TabIndex = 4;
             this.abaBuscaProduto.Text = "Busca Produto";
             // 
@@ -1276,16 +1290,176 @@
             // abaListarVendas
             // 
             this.abaListarVendas.BackColor = System.Drawing.Color.Lavender;
+            this.abaListarVendas.Controls.Add(this.dataGridViewItensVenda);
+            this.abaListarVendas.Controls.Add(this.groupBox6);
+            this.abaListarVendas.Controls.Add(this.label33);
+            this.abaListarVendas.Controls.Add(this.label25);
+            this.abaListarVendas.Controls.Add(this.label31);
+            this.abaListarVendas.Controls.Add(this.dataGridViewListarVenda);
+            this.abaListarVendas.Controls.Add(this.dataGridViewListarVEndasCliente);
             this.abaListarVendas.Location = new System.Drawing.Point(4, 44);
             this.abaListarVendas.Name = "abaListarVendas";
             this.abaListarVendas.Padding = new System.Windows.Forms.Padding(3);
-            this.abaListarVendas.Size = new System.Drawing.Size(1323, 830);
+            this.abaListarVendas.Size = new System.Drawing.Size(1357, 830);
             this.abaListarVendas.TabIndex = 5;
-            this.abaListarVendas.Text = "tabPage6";
+            this.abaListarVendas.Text = "Lista Vendas";
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.maskedTextBoxVendaCliente);
+            this.groupBox6.Controls.Add(this.radioButtonVendasCpf);
+            this.groupBox6.Controls.Add(this.radioButtonVendasNomeCliente);
+            this.groupBox6.Location = new System.Drawing.Point(41, 57);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(643, 118);
+            this.groupBox6.TabIndex = 19;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Pesquise Por";
+            // 
+            // maskedTextBoxVendaCliente
+            // 
+            this.maskedTextBoxVendaCliente.Location = new System.Drawing.Point(6, 75);
+            this.maskedTextBoxVendaCliente.Name = "maskedTextBoxVendaCliente";
+            this.maskedTextBoxVendaCliente.Size = new System.Drawing.Size(622, 42);
+            this.maskedTextBoxVendaCliente.TabIndex = 4;
+            this.maskedTextBoxVendaCliente.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.maskedTextBoxVendaCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.buscaClienteListarVenda);
+            // 
+            // radioButtonVendasCpf
+            // 
+            this.radioButtonVendasCpf.AutoSize = true;
+            this.radioButtonVendasCpf.Location = new System.Drawing.Point(6, 36);
+            this.radioButtonVendasCpf.Name = "radioButtonVendasCpf";
+            this.radioButtonVendasCpf.Size = new System.Drawing.Size(83, 39);
+            this.radioButtonVendasCpf.TabIndex = 1;
+            this.radioButtonVendasCpf.TabStop = true;
+            this.radioButtonVendasCpf.Text = "CPF";
+            this.radioButtonVendasCpf.UseVisualStyleBackColor = true;
+            this.radioButtonVendasCpf.CheckedChanged += new System.EventHandler(this.maskTextBoxVendaCliente);
+            // 
+            // radioButtonVendasNomeCliente
+            // 
+            this.radioButtonVendasNomeCliente.AutoSize = true;
+            this.radioButtonVendasNomeCliente.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.radioButtonVendasNomeCliente.Checked = true;
+            this.radioButtonVendasNomeCliente.Location = new System.Drawing.Point(102, 36);
+            this.radioButtonVendasNomeCliente.Name = "radioButtonVendasNomeCliente";
+            this.radioButtonVendasNomeCliente.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.radioButtonVendasNomeCliente.Size = new System.Drawing.Size(104, 39);
+            this.radioButtonVendasNomeCliente.TabIndex = 0;
+            this.radioButtonVendasNomeCliente.TabStop = true;
+            this.radioButtonVendasNomeCliente.Text = "Nome";
+            this.radioButtonVendasNomeCliente.UseVisualStyleBackColor = true;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(626, 365);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(67, 35);
+            this.label33.TabIndex = 23;
+            this.label33.Text = "Itens";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(41, 217);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(93, 35);
+            this.label25.TabIndex = 22;
+            this.label25.Text = "Vendas";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(695, 37);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(103, 35);
+            this.label31.TabIndex = 21;
+            this.label31.Text = "Clientes";
+            // 
+            // dataGridViewListarVenda
+            // 
+            this.dataGridViewListarVenda.AllowUserToAddRows = false;
+            this.dataGridViewListarVenda.AllowUserToDeleteRows = false;
+            this.dataGridViewListarVenda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridViewListarVenda.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewListarVenda.BackgroundColor = System.Drawing.Color.MistyRose;
+            this.dataGridViewListarVenda.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridViewListarVenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewListarVenda.GridColor = System.Drawing.Color.Black;
+            this.dataGridViewListarVenda.Location = new System.Drawing.Point(47, 255);
+            this.dataGridViewListarVenda.Name = "dataGridViewListarVenda";
+            this.dataGridViewListarVenda.ReadOnly = true;
+            this.dataGridViewListarVenda.RowHeadersWidth = 51;
+            this.dataGridViewListarVenda.Size = new System.Drawing.Size(541, 526);
+            this.dataGridViewListarVenda.TabIndex = 20;
+            this.dataGridViewListarVenda.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListarItensVenda);
+            // 
+            // dataGridViewListarVEndasCliente
+            // 
+            this.dataGridViewListarVEndasCliente.AllowUserToAddRows = false;
+            this.dataGridViewListarVEndasCliente.AllowUserToDeleteRows = false;
+            this.dataGridViewListarVEndasCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridViewListarVEndasCliente.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewListarVEndasCliente.BackgroundColor = System.Drawing.Color.MistyRose;
+            this.dataGridViewListarVEndasCliente.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridViewListarVEndasCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewListarVEndasCliente.GridColor = System.Drawing.Color.Black;
+            this.dataGridViewListarVEndasCliente.Location = new System.Drawing.Point(701, 75);
+            this.dataGridViewListarVEndasCliente.Name = "dataGridViewListarVEndasCliente";
+            this.dataGridViewListarVEndasCliente.ReadOnly = true;
+            this.dataGridViewListarVEndasCliente.RowHeadersWidth = 51;
+            this.dataGridViewListarVEndasCliente.Size = new System.Drawing.Size(635, 266);
+            this.dataGridViewListarVEndasCliente.TabIndex = 18;
+            this.dataGridViewListarVEndasCliente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.addListarVendas);
+            // 
+            // dataGridViewItensVenda
+            // 
+            this.dataGridViewItensVenda.AllowUserToAddRows = false;
+            this.dataGridViewItensVenda.AllowUserToDeleteRows = false;
+            this.dataGridViewItensVenda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dataGridViewItensVenda.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewItensVenda.BackgroundColor = System.Drawing.Color.MistyRose;
+            this.dataGridViewItensVenda.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridViewItensVenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewItensVenda.GridColor = System.Drawing.Color.Black;
+            this.dataGridViewItensVenda.Location = new System.Drawing.Point(632, 412);
+            this.dataGridViewItensVenda.Name = "dataGridViewItensVenda";
+            this.dataGridViewItensVenda.ReadOnly = true;
+            this.dataGridViewItensVenda.RowHeadersWidth = 51;
+            this.dataGridViewItensVenda.Size = new System.Drawing.Size(704, 383);
+            this.dataGridViewItensVenda.TabIndex = 24;
+            // 
+            // toolStripButton6
+            // 
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.Size = new System.Drawing.Size(106, 88);
+            this.toolStripButton6.Text = "Lista Vendas";
+            this.toolStripButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton6.Click += new System.EventHandler(this.consultarVendas);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(106, 6);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(106, 6);
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(106, 6);
             // 
             // Form1
             // 
@@ -1296,10 +1470,11 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "SisVendas";
             this.Load += new System.EventHandler(this.carregaPrincipal);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -1329,7 +1504,14 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.abaListarVendas.ResumeLayout(false);
+            this.abaListarVendas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListarVenda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListarVEndasCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItensVenda)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1428,7 +1610,6 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label lbTotalItens;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.GroupBox groupBox5;
@@ -1448,6 +1629,20 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colNomeProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrecoProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn colQuantProduto;
+        private System.Windows.Forms.DataGridView dataGridViewItensVenda;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxVendaCliente;
+        private System.Windows.Forms.RadioButton radioButtonVendasCpf;
+        private System.Windows.Forms.RadioButton radioButtonVendasNomeCliente;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.DataGridView dataGridViewListarVenda;
+        private System.Windows.Forms.DataGridView dataGridViewListarVEndasCliente;
+        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
     }
 }
 

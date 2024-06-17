@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Talita\\Desktop\\C#\\SisVendas1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C9316DB7-5716-4033-8474-25BE861708F0}|SisVendas1.csproj|C:\\Users\\Talita\\Desktop\\C#\\SisVendas1\\Controller\\controllerItensVenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9316DB7-5716-4033-8474-25BE861708F0}|SisVendas1.csproj|solutionrelative:Controller\\controllerItensVenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9316DB7-5716-4033-8474-25BE861708F0}|SisVendas1.csproj|C:\\Users\\Talita\\Desktop\\C#\\SisVendas1\\Model\\modelItensVenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9316DB7-5716-4033-8474-25BE861708F0}|SisVendas1.csproj|solutionrelative:Model\\modelItensVenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C9316DB7-5716-4033-8474-25BE861708F0}|SisVendas1.csproj|c:\\users\\talita\\desktop\\c#\\sisvendas1\\view\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9316DB7-5716-4033-8474-25BE861708F0}|SisVendas1.csproj|solutionrelative:view\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9316DB7-5716-4033-8474-25BE861708F0}|SisVendas1.csproj|C:\\Users\\Talita\\Desktop\\C#\\SisVendas1\\Model\\modelCidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9316DB7-5716-4033-8474-25BE861708F0}|SisVendas1.csproj|solutionrelative:Model\\modelCidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9316DB7-5716-4033-8474-25BE861708F0}|SisVendas1.csproj|C:\\Users\\Talita\\Desktop\\C#\\SisVendas1\\Controller\\controllerCliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9316DB7-5716-4033-8474-25BE861708F0}|SisVendas1.csproj|solutionrelative:Controller\\controllerCliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C9316DB7-5716-4033-8474-25BE861708F0}|SisVendas1.csproj|C:\\Users\\Talita\\Desktop\\C#\\SisVendas1\\Model\\modelVenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9316DB7-5716-4033-8474-25BE861708F0}|SisVendas1.csproj|solutionrelative:Model\\modelVenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9316DB7-5716-4033-8474-25BE861708F0}|SisVendas1.csproj|C:\\Users\\Talita\\Desktop\\C#\\SisVendas1\\View\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C9316DB7-5716-4033-8474-25BE861708F0}|SisVendas1.csproj|solutionrelative:View\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C9316DB7-5716-4033-8474-25BE861708F0}|SisVendas1.csproj|C:\\Users\\Talita\\Desktop\\C#\\SisVendas1\\Model\\modelItensVenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9316DB7-5716-4033-8474-25BE861708F0}|SisVendas1.csproj|solutionrelative:Model\\modelItensVenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9316DB7-5716-4033-8474-25BE861708F0}|SisVendas1.csproj|C:\\Users\\Talita\\Desktop\\C#\\SisVendas1\\Controller\\controllerItensVenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9316DB7-5716-4033-8474-25BE861708F0}|SisVendas1.csproj|solutionrelative:Controller\\controllerItensVenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C9316DB7-5716-4033-8474-25BE861708F0}|SisVendas1.csproj|C:\\Users\\Talita\\Desktop\\C#\\SisVendas1\\Controller\\controllerVenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,6 +33,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{C9316DB7-5716-4033-8474-25BE861708F0}|SisVendas1.csproj|C:\\Users\\Talita\\Desktop\\C#\\SisVendas1\\Controller\\controllerProduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9316DB7-5716-4033-8474-25BE861708F0}|SisVendas1.csproj|solutionrelative:Controller\\controllerProduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9316DB7-5716-4033-8474-25BE861708F0}|SisVendas1.csproj|C:\\Users\\Talita\\Desktop\\C#\\SisVendas1\\View\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C9316DB7-5716-4033-8474-25BE861708F0}|SisVendas1.csproj|solutionrelative:View\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 18,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,6 +94,30 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "modelCidade.cs",
+              "DocumentMoniker": "C:\\Users\\Talita\\Desktop\\C#\\SisVendas1\\Model\\modelCidade.cs",
+              "RelativeDocumentMoniker": "Model\\modelCidade.cs",
+              "ToolTip": "C:\\Users\\Talita\\Desktop\\C#\\SisVendas1\\Model\\modelCidade.cs",
+              "RelativeToolTip": "Model\\modelCidade.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T11:04:52.96Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "controllerCliente.cs",
+              "DocumentMoniker": "C:\\Users\\Talita\\Desktop\\C#\\SisVendas1\\Controller\\controllerCliente.cs",
+              "RelativeDocumentMoniker": "Controller\\controllerCliente.cs",
+              "ToolTip": "C:\\Users\\Talita\\Desktop\\C#\\SisVendas1\\Controller\\controllerCliente.cs",
+              "RelativeToolTip": "Controller\\controllerCliente.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEEAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T11:02:48.078Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
               "Title": "modelVenda.cs",
               "DocumentMoniker": "C:\\Users\\Talita\\Desktop\\C#\\SisVendas1\\Model\\modelVenda.cs",
@@ -94,12 +126,11 @@
               "RelativeToolTip": "Model\\modelVenda.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T14:47:23.131Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-03T14:47:23.131Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "modelItensVenda.cs",
               "DocumentMoniker": "C:\\Users\\Talita\\Desktop\\C#\\SisVendas1\\Model\\modelItensVenda.cs",
               "RelativeDocumentMoniker": "Model\\modelItensVenda.cs",
@@ -107,71 +138,67 @@
               "RelativeToolTip": "Model\\modelItensVenda.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T14:39:46.819Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-03T14:39:46.819Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "controllerItensVenda.cs",
               "DocumentMoniker": "C:\\Users\\Talita\\Desktop\\C#\\SisVendas1\\Controller\\controllerItensVenda.cs",
               "RelativeDocumentMoniker": "Controller\\controllerItensVenda.cs",
               "ToolTip": "C:\\Users\\Talita\\Desktop\\C#\\SisVendas1\\Controller\\controllerItensVenda.cs",
               "RelativeToolTip": "Controller\\controllerItensVenda.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAAABwAAABNAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAYwA8AAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T13:09:25.381Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-03T13:09:25.381Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "controllerVenda.cs",
               "DocumentMoniker": "C:\\Users\\Talita\\Desktop\\C#\\SisVendas1\\Controller\\controllerVenda.cs",
               "RelativeDocumentMoniker": "Controller\\controllerVenda.cs",
               "ToolTip": "C:\\Users\\Talita\\Desktop\\C#\\SisVendas1\\Controller\\controllerVenda.cs",
               "RelativeToolTip": "Controller\\controllerVenda.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAA1wDkAAABMAAAA",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAkwFEAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T22:56:21.52Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-02T22:56:21.52Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "controllerProduto.cs",
               "DocumentMoniker": "C:\\Users\\Talita\\Desktop\\C#\\SisVendas1\\Controller\\controllerProduto.cs",
               "RelativeDocumentMoniker": "Controller\\controllerProduto.cs",
               "ToolTip": "C:\\Users\\Talita\\Desktop\\C#\\SisVendas1\\Controller\\controllerProduto.cs",
               "RelativeToolTip": "Controller\\controllerProduto.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABgAAABTAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAkwEkAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-06T13:08:53.792Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\Talita\\Desktop\\C#\\SisVendas1\\View\\Form1.cs",
               "RelativeDocumentMoniker": "View\\Form1.cs",
               "ToolTip": "C:\\Users\\Talita\\Desktop\\C#\\SisVendas1\\View\\Form1.cs",
               "RelativeToolTip": "View\\Form1.cs",
-              "ViewState": "AQIAAHQCAAAAAAAAAAA5wNYCAAA4AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC8AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-19T11:03:57.855Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Talita\\Desktop\\C#\\SisVendas1\\View\\Form1.cs",
               "RelativeDocumentMoniker": "View\\Form1.cs",
               "ToolTip": "C:\\Users\\Talita\\Desktop\\C#\\SisVendas1\\View\\Form1.cs [Design]",
               "RelativeToolTip": "View\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T11:45:26.808Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-19T11:45:26.808Z"
             }
           ]
         }
